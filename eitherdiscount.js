@@ -1,8 +1,7 @@
-// Discount Rules
+// get either of the below discounts
 // customers who have purchased more than 4 products gets a 10% discount.
 // customers who have spent more than $200 gets a $25 discount
-// Kindly write code to apply discount rules
-// Best of Luck
+
 
 let customers = [
     {
@@ -25,7 +24,6 @@ let customers = [
     }
 ];
 
-
 const getDiscount = (customers)=>{
     let moreThan4 = 4;
     let tenPercentDiscount = 0.1;
@@ -34,12 +32,10 @@ const getDiscount = (customers)=>{
     return customers.map((customer)=>{
         let discount = 0;
         if(customer.totalProductsPurchased > moreThan4){
-            discount+=tenPercentDiscount * customer.totalAmountSpent
+            discount=tenPercentDiscount * customer.totalAmountSpent
         }if(customer.totalAmountSpent > moreThan200){
-            discount+=gets25Discount
+            discount=gets25Discount
         } return {...customer, discountGiven: discount}
     })
 }
 console.log(getDiscount(customers));
-
-
