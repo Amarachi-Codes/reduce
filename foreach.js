@@ -21,3 +21,25 @@ const soundBattle = (numbers)=>{
     }return "draw"
 }
 console.log(soundBattle(numbers));
+
+// for loop
+
+const numberBattles = (numbers)=>{
+    let oCount = 0
+    let eCount = 0
+    for(let i = 0; i < numbers.length; i++){
+        if(numbers[i] % 2 === 0){
+            eCount++
+        } else{
+            oCount++
+        }
+    }
+    if(oCount > eCount){
+        return "odd wins"
+    }if(eCount > oCount){
+        return "even wins"
+    }else{
+       return "draw"
+    } 
+}
+console.log(numberBattles(numbers));
