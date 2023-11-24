@@ -7,4 +7,12 @@ const getFruits = (fruits)=>{
         console.log(fruits[i]);
     }
 }
-getFruits(fruits)
+// getFruits(fruits)
+
+
+const aroundFruits = (fruits)=>{
+    fruits.forEach((fruit, index) => {
+        console.log(`${index}`,fruit)
+    });
+}
+aroundFruits(fruits)
